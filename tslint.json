@@ -6,7 +6,15 @@
   "jsRules": {},
   "rules": {
     "trailing-comma": [ false ],
-    "ordered-imports": [ false ]
+    "ordered-imports": [ false ],
+    "whitespace": [
+      true,
+      "check-module"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ]
   },
   "rulesDirectory": []
 }
