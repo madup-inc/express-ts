@@ -1,9 +1,9 @@
-import { Request, Response, Router } from "express";
+import { Request, Response, Router } from 'express';
 
 const router: Router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  res.send("Hello world\n");
+router.get('/', (req: Request, res: Response) => {
+  res.send('Hello world\n');
 });
 
 class Person {
@@ -24,12 +24,12 @@ class Person {
   }
 }
 
-router.get("/json", (req: Request, res: Response) => {
+router.get('/json', (req: Request, res: Response) => {
   const p: Person = Person.fromJsonObj(req.body);
   res.send(`MSG: ${p.greet()}\n`);
 });
 
-router.get("/:name", (req: Request, res: Response) => {
+router.get('/:name', (req: Request, res: Response) => {
   const { name } = req.params;
   res.send(`Hello, ${name}\n`);
 });
